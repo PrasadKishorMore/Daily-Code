@@ -1,0 +1,43 @@
+public class Main
+
+{
+	public static void main(String[] args) {
+		System.out.println("Q->  Write a program to find the longest word in a sentence.");
+		
+		
+		String str ="prasad kishor more";
+		
+	    String s[]=str.split(" ");
+	    
+	    String newString ="";
+	    int len =0;
+	   
+	   char c=' ';
+	    
+	    for(String t:s){
+	        System.out.println(t);
+	        
+	        if(t.length()>len){
+	            
+	            len = t.length();
+	            newString = t;
+	        }
+	        else if(t != null){
+	            
+	                String t1 = t.toLowerCase();
+	            
+	             for(int i=0; i<t1.length(); i++){
+	                 
+	                 if(t1.charAt(i)=='a' || t1.charAt(i)=='e' || t1.charAt(i)=='i'|| t1.charAt(i)=='o' || t1.charAt(i)=='u'){
+	                     
+	                    c=t1.charAt(i);
+	                    break;
+	                 }
+	             }
+	        }
+	    }
+	    
+	    System.out.println(newString +" "+  len);
+	    System.out.println(c);
+	}
+}

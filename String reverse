@@ -1,0 +1,35 @@
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		String p ="prasad";
+		
+		
+// 1)		for(int i= p.length()-2; i> 0 ; i++){
+		    
+// 		    System.out.print(p.charAt(i));
+// 		}
+
+
+    //2)   int l=0;
+    //   int r=p.length()-1;
+       
+    //   while(l<r){
+           
+    //       char t = p.charAt(l);
+    //       p.charAt(l)=p.charAt(r);
+    //       p.charAt(r)=t;
+    //       l++;
+    //       r++;
+    //   }
+       
+    //   System.out.println(p);
+    
+   //3) 
+     StringBuffer sb = new StringBuffer(p);
+     sb = sb.reverse();
+     
+     System.out.println(sb);
+	}
+}

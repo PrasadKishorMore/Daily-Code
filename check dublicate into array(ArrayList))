@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		
+		int arr[] = {1,2,1,3}; int target =9;
+		
+		
+	    ArrayList<Integer> h = new ArrayList<>();
+	    
+	    boolean check =false;
+	    for(int num : arr){
+	        
+	        if(h.contains(num)){
+	            
+	      
+	              check = true;
+	              
+	        }
+	        
+	                h.add(num);
+	    }
+	    
+	    System.out.println(check +","+h);
+	
+		
+	}
+}

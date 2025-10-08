@@ -1,0 +1,20 @@
+ // largest number into digit
+       
+       int num = 1271;
+       
+       int large  =0;
+       
+       while(num > 0){
+           
+           
+           int digit = num %10;
+           
+           if(digit > large){
+               large = digit;
+           }
+           
+           num /= 10;
+       }
+       
+       System.out.println(large);
+         

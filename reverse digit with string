@@ -22,3 +22,31 @@ public class Main
 		
 		System.out.println(s);
 	}
+
+
+----------------------------------------------------or------------------------------or------------------------------or-----------------------------
+
+
+        int num = 123;
+        String s = "";
+
+        while (num > 0) {
+            int d = num % 10;
+            s = s + d; // accumulate digits
+            num /= 10;
+        }
+
+        System.out.println(s);  //"321"
+
+-------------------------------------------or-----------------------------------------------or------------------------------------------or-------------------------
+
+
+        int num = 123;
+        String s = Integer.toString(num);
+        
+        StringBuffer sb = new StringBuffer(s);
+        sb.reverse();
+        
+        int rev = Integer.parseInt(sb.toString());
+
+        System.out.println(rev);  //321

@@ -1,0 +1,22 @@
+public class Main
+{
+    
+    // reverse the Number
+    
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		int  num = 123;
+		
+		int rev = 0;
+		
+		while(num > 0){
+		    
+		    int digit = num % 10;  // geting dinominator single value
+		    rev = rev*10+digit;   // eg 0*10+3= 3, 3*10+2= 32, 32*10+1=(321)
+		    num/=10;             // geting numarator value
+		}
+		
+		System.out.println(rev);
+	}
+}

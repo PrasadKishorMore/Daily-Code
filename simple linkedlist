@@ -1,0 +1,200 @@
+public class Main
+{
+    
+    class Node{
+        
+        int data;
+        Node next;
+        
+        Node(int data){
+            
+            this.data = data;
+            this.next = null;
+        }
+        
+    }    
+        Node head;
+        Node tail;
+        
+        public void insertlast(int d){
+            
+            Node  node = new Node(d);
+            
+            if(head == null){
+                head = node;
+                tail = node;
+                tail.next = null;
+            }else{
+                
+                Node temp = head;
+                while(temp.next != null){
+                    temp = temp.next;
+                }
+                
+                temp.next = node;
+                
+            }
+        }
+        
+        public void insertfirst(int d){
+            
+            Node node = new Node(d);
+            
+            Node temp = head;
+            
+            node.next = temp;
+            head = node;
+        }
+        
+        public void deleteLast(){
+            
+            
+            Node temp = head;
+            Node m = temp;
+            
+            while(temp.next.next != null){
+                
+                temp = temp.next;
+                
+                
+            }
+            
+            head = m;
+        }
+        
+        public void deletefirst(){
+            
+            Node temp = head ;
+            head = temp.next;
+        }
+        
+        public void deleteindex(int i,int d){
+            
+            Node node = new Node(d);
+            
+            Node temp = head ;
+            int size = 0;
+            while(temp != null){
+                temp = temp.next;
+                size++;
+            }
+            
+            temp = head;
+            for(int j=1;j<size-i;j++){
+                
+                temp = temp.next;
+            }
+            
+            node.next = temp.next.next;
+            temp.next = node;
+        }
+        
+        public void reverse(){
+            
+            
+            Node p1 = null;
+            Node p2 = head;
+            
+            while(p2.next != null){
+                Node next = p2.next;
+                p2.next = p1;
+                p1 = p2;
+                p2 = next;
+            }
+            
+            head = p1;
+            
+            Node temp = head;
+           
+           while(temp != null){
+               
+               System.out.print("=>"+temp.data);
+               temp = temp.next;
+           }
+        }
+        
+        // public void cyclic(){
+            
+        //     Node s = head.next;
+        //     Node l = head.next.next;
+            
+        //     while(l.next != null || l.next.next != null){
+                
+        //     }
+        // }
+        
+        
+        public void replace(int i , int j){
+            
+            Node node1 = null;
+            Node node2 = null;
+            
+            Node temp = head;
+            int index =0;
+            while(temp != null){
+                
+                if(index == i){
+                    node1 = temp;
+                  
+                }else if(index == j){
+                    node2 = temp;
+                }
+                  index++;
+                temp = temp.next;
+            }
+            
+            if(node1 != null && node2 != null){
+                
+                int val = node1.data;
+                node1.data = node2.data;
+                node2.data = val;
+            }
+            
+            
+            temp = head;
+            while(temp != null){
+                
+                System.out.println("=>"+temp.data);
+                temp = temp.next;
+            }
+            
+            
+        }
+        public void display(){
+            
+            Node temp = head;
+            
+            while(temp != null){
+                
+                System.out.print("=>"+temp.data);
+                temp = temp.next;
+            }
+            
+            System.out.println();
+        }
+    
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		Main m = new Main();
+		m.insertlast(11);
+		m.insertlast(12);
+		m.display();
+		m.insertfirst(555);
+		m.display();
+		m.insertfirst(999);
+		m.insertfirst(444);
+		m.display();
+		m.deleteLast();
+		m.display();
+		m.deletefirst();
+		m.display();
+		m.deleteindex(2,404);
+		m.display();
+		m.reverse();
+		m.replace(0,1);
+
+
+	}
+
+}

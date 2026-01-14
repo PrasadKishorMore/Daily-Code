@@ -1,1 +1,19 @@
+//LongLengthString
 
+String arr[] = {"prasad","kiran","pushpa","Ramo"};
+
+
+        String str = "";
+        int len = 0;
+
+        for(int i=0; i<arr.length; i++){
+
+            String s = arr[i];
+
+            if(len < s.length()){
+                len = s.length();
+                str = s;
+            }
+        }
+
+        System.out.println("longest string ="+ str);
